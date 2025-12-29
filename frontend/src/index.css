@@ -11,3 +11,114 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* =========================
+   Editor layout
+   ========================= */
+
+.editor-page {
+  padding: 20px;
+}
+
+.editor-header {
+  margin-bottom: 20px;
+}
+
+.editor-workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Left column (form) */
+.editor-left {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Right column (preview) */
+.editor-right {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+/* =========================
+   Label preview (visual)
+   ========================= */
+
+.label-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.label-canvas {
+  width: 320px;
+  min-height: 200px;
+  padding: 12px;
+  border: 2px solid #000;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.label-header {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.label-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label-field {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.label-field-name {
+  font-weight: bold;
+}
+
+.label-barcode {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.barcode-placeholder {
+  width: 100%;
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    #000,
+    #000 2px,
+    #fff 2px,
+    #fff 4px
+  );
+}
+
+/* =========================
+   Responsive editor layout
+   ========================= */
+
+@media (max-width: 900px) {
+  .editor-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-left,
+  .editor-right {
+    padding: 12px;
+  }
+
+  .label-canvas {
+    width: 100%;
+    max-width: 360px;
+  }
+}

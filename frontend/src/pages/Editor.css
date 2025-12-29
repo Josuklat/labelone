@@ -1,0 +1,31 @@
+/* 
+  Main layout for the editor page.
+  Creates a two-column layout:
+  - Left: form
+  - Right: live preview
+*/
+.editor-layout {
+  display: grid;                 /* Use CSS Grid for layout */
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 32px;                     /* Space between columns */
+  margin-top: 24px;              /* Separation from header */
+}
+
+/* 
+  Left column:
+  Contains the editable form fields
+*/
+.editor-left {
+  display: flex;        /* Use flexbox for vertical stacking */
+  flex-direction: column;
+}
+
+/* 
+  Right column:
+  Contains the label preview
+*/
+.editor-right {
+  display: flex;
+  justify-content: center; /* Center preview horizontally */
+  align-items: flex-start; /* Align preview to top */
+}
