@@ -1,4 +1,4 @@
-import en from "../i18n/en";
+import en from "../../i18n/en";
 
 export default function Help() {
   return (

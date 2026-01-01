@@ -1,6 +1,6 @@
-import en from "../i18n/en";
-import templates from "../data/templates";
-import TemplateCard from "../components/TemplateCard";
+import en from "../../i18n/en";
+import templates from "../../data/templates";
+import TemplateCard from "../../components/library/TemplateCard";
 
 export default function Library() {
   return (

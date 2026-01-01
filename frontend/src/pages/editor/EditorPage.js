@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useMemo } from "react";
-import templates from "../data/templates";
-import EditorForm from "../components/EditorForm";
-import EditorPreview from "../components/EditorPreview";
+import templates from "../../data/templates";
+import EditorForm from "../../components/editor/EditorForm";
+import EditorPreview from "../../components/editor/EditorPreview";
 import "./Editor.css";
 
 export default function Editor() {

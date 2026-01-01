@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import en from "../i18n/en";
-import NewsSection from "../components/NewsSection";
+import en from "../../i18n/en";
+import NewsSection from "../../components/home/NewsSection";
 
 export default function Home() {
   const heroRef = useRef(null);
