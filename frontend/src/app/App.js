@@ -1,20 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Library from "./pages/library";
-import Help from "./pages/help";
-import Editor from "./pages/editor";
-import Navbar from "./components/Navbar";
+// src/app/App.js
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routes from "./routes";
+
+// Global layout component
+import Navbar from "../components/layout/Navbar";
+
+// Main application component
 function App() {
   return (
     <BrowserRouter>
-      <Navbar /> 
+      {/* Global navigation */}
+      <Navbar />
 
+      {/* Application routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/library" element={<Library />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/editor/:templateId" element={<Editor />} />
+        {routes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={route.element}
+          />
+        ))}
       </Routes>
     </BrowserRouter>
   );
